@@ -7,6 +7,7 @@ import { transformWithEsbuild } from 'vite'
 import { Config, HoudiniRouteScript } from './config'
 import * as fs from './fs'
 import { parseJS } from './parse'
+import { pathPlatform } from './path'
 
 type Program = recast.types.namedTypes.Program
 type VariableDeclaration = recast.types.namedTypes.VariableDeclaration
@@ -104,10 +105,11 @@ async function processScript(
 
 				// look up the query content if we found a match
 				if (query) {
+					const builtPath = pathPlatform(
+						path.join(config.artifactDirectory, `${query}.js`)
+					)
 					// compute the artifact path
-					const artifact =
-						mockArtifacts?.[query] ||
-						(await import(path.join(config.artifactDirectory, query + '.js'))).default
+					const artifact = mockArtifacts?.[query] || (await import(builtPath)).default
 
 					// save the query
 					globalImports[name] = artifact.raw
