@@ -1,0 +1,6 @@
+query Page_User($userId: ID!) {
+  user(id: $userId, snapshot: "Page_User") {
+    id
+    name
+  }
+}
