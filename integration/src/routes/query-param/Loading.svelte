@@ -1,6 +1,6 @@
 <!-- <span class="">One eternity later...</span> -->
 
-<div class="gradient element">One eternity later...</div>
+<span class="gradient element">One eternity later...</span>
 
 <style>
   .element {

@@ -1,6 +1,6 @@
 query Page_User($userId: ID!) {
-  user(id: $userId, snapshot: "Page_User") {
+  user(id: $userId, snapshot: "Page_User", delay: 750) {
     id
-    name
+    ...UserName
   }
 }

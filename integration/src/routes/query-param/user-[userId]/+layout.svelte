@@ -3,6 +3,7 @@
   import { browser } from '$app/environment';
   import { GQL_Page_User } from '$houdini';
   import Loading from '../Loading.svelte';
+  import UserName from '../UserName.svelte';
 
   // TODO
   //   +layout.gql ???
@@ -29,13 +30,7 @@ Pages 👉
 
 <hr />
 <h3>Page User</h3>
-{#if $GQL_Page_User.data}
-  <div id="result">
-    {$GQL_Page_User.data?.user.name}
-  </div>
-{:else}
-  <Loading />
-{/if}
+<UserName user={$GQL_Page_User.data?.user} />
 
 <hr />
 

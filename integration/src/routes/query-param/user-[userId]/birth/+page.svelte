@@ -9,6 +9,12 @@
 
 <h4>Birth</h4>
 
+{#if $Page_User_Birth.data?.user?.birthDate !== undefined}
+  {$Page_User_Birth.data?.user.birthDate?.toISOString().split('T')[0]}
+{:else}
+  <Loading />
+{/if}
+
 <!-- 
   user.id is already resolved by some other places... we be instant
   isFetching is maybe a bit wrong
@@ -17,17 +23,9 @@
     - if it hit the cache, isFetching should never go to true.
 -->
 {#if $Page_User_Birth.isFetching}
-  {console.log('isFetching in the console')}
-  <!-- to delete... -->
-  <Loading />
-  <Loading />
-  <Loading />
-  <Loading />
-  <Loading />
-  <Loading />
-{/if}
-{#if $Page_User_Birth.data?.user.birthDate}
-  {$Page_User_Birth.data?.user.birthDate?.toISOString().split('T')[0]}
-{:else}
-  <Loading />
+  <br />
+  <br />
+  <br />
+  <br />
+  {console.log('isFetching in the console... when everything is cached, it should not be logged!')}
 {/if}
