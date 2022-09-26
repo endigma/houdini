@@ -1,5 +1,17 @@
 # houdini
 
+## 0.16.6
+
+### Patch Changes
+
+-   [#563](https://github.com/HoudiniGraphql/houdini/pull/563) [`ad0ed5b`](https://github.com/HoudiniGraphql/houdini/commit/ad0ed5bcd476bb990ab08f351eed87bbf0cdd639) Thanks [@DanielHritcu](https://github.com/DanielHritcu)! - Warn user when the config file can't be read
+
+*   [#569](https://github.com/HoudiniGraphql/houdini/pull/569) [`08f834a`](https://github.com/HoudiniGraphql/houdini/commit/08f834abff4637c023c9d7a208cd0c28976911b3) Thanks [@AlecAivazis](https://github.com/AlecAivazis)! - Mutation result is never null
+
+-   [#566](https://github.com/HoudiniGraphql/houdini/pull/566) [`a86ec3b`](https://github.com/HoudiniGraphql/houdini/commit/a86ec3b8ae57faf1f0bffd7e10ea82fdeb3883cb) Thanks [@sjcobb2022](https://github.com/sjcobb2022)! - Change signature of schema function in vite plugin to enable extra config
+
+*   [#569](https://github.com/HoudiniGraphql/houdini/pull/569) [`08f834a`](https://github.com/HoudiniGraphql/houdini/commit/08f834abff4637c023c9d7a208cd0c28976911b3) Thanks [@AlecAivazis](https://github.com/AlecAivazis)! - Subscription.listen arguments are optional
+
 ## 0.16.5
 
 ### 🐛 Fixes
